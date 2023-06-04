@@ -22,7 +22,7 @@ def check_answer(guess, a_followers, b_followers):
 
 
 print(logo)
-
+score = 0
 account_a = random.choice(data)
 account_b = random.choice(data)
 if account_a == account_b:
@@ -38,4 +38,9 @@ guess = input("Who has more followers 'A' or 'B'?: ").lower()
 a_follower_count = account_a["follower_count"]
 b_follower_count = account_b["follower_count"]
 is_correct = check_answer(guess, a_follower_count, b_follower_count)
-print(is_correct)
+
+if is_correct:
+    score += 1
+    print(f"You are right!! Current Score: {score}")
+else:
+    print(f"You got it wrong! Final Scoe: {score}")
