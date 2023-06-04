@@ -1,6 +1,6 @@
 # Higher lower game
 # 02/06/2023
-from art import logo
+from art import logo, vs
 from game_data import data
 import random
 
@@ -10,7 +10,7 @@ def format_data(account):
     account_name = account["name"]
     account_descr = account["description"]
     account_country = account["country"]
-    print(f"{account_name}, a {account_descr}, from {account_country}")
+    return f"{account_name}, a {account_descr}, from {account_country}"
 
 
 print(logo)
@@ -21,5 +21,6 @@ if account_a == account_b:
     account_b = random.choice(data)
 
 
-format_data(account_a)
-format_data(account_b)
+print(f"Compare A: {format_data(account_a)}")
+print(vs)
+print(f"Compare B: {format_data(account_b)}")
